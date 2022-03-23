@@ -158,14 +158,15 @@ $(function(){
         }
     });
 
-    $(".lists li").hover(mouseenter, mouseleave);
-
     function mouseenter(){
         $(this).css({"background-color": "#956D84", "color": "white", "font-weight": "700"});
     }
     function mouseleave(){
         $(this).css({"background-color": "white", "color": "#333333", "font-weight": "300"});
     }
+    $(".lists li").hover(mouseenter, mouseleave);
+    $(".myDropDown-list-1 li").hover(mouseenter, mouseleave);
+    $(".myDropDown-list-2 li").hover(mouseenter, mouseleave);
 });
 
 $(function(){

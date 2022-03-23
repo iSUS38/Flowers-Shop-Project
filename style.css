@@ -498,6 +498,10 @@ footer hr {
 
 .myDropDown-list-2 {
   display: none;
+  position: absolute;
+  background-color: white;
+  background-clip: padding-box;
+  z-index: 1;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0.25rem;
   padding: 0.5rem 0;
@@ -507,8 +511,16 @@ footer hr {
   padding: 0.25rem 1rem;
 }
 
+.myDropDown-list-2:hover {
+  cursor: pointer;
+}
+
 .myDropDown-list-1 {
   display: none;
+  position: absolute;
+  background-color: white;
+  background-clip: padding-box;
+  z-index: 1;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0.25rem;
   padding: 0.5rem 0;
@@ -516,6 +528,10 @@ footer hr {
 
 .myDropDown-list-1 li {
   padding: 0.25rem 1rem;
+}
+
+.myDropDown-list-1:hover {
+  cursor: pointer;
 }
 
 #sum-value {
