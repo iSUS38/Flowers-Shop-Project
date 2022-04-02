@@ -178,3 +178,16 @@ $(function(){
         $(location).attr("href", "index.html");
     });
 });
+
+$(function(){
+    $(".footer-list h3").click(function(){
+        let ul = $(this).next();
+        if(ul.is(":visible")){
+            ul.hide(500);
+            $(this).filter(".vector").css("background-image", "url(icons/footer-vector-right.png)");
+        } else {
+            ul.show(500);
+            $(this).filter(".vector").css("background-image", "url()");
+        }
+    });
+});

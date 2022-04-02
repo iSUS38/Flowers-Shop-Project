@@ -460,6 +460,10 @@ footer hr {
   color: #956D84;
 }
 
+footer .logo-img {
+  position: relative;
+}
+
 .text-for-logo {
   position: absolute;
   bottom: 40px;
@@ -558,6 +562,15 @@ footer hr {
   padding-top: 3px;
 }
 
+.footer-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .cart {
   position: relative;
 }
@@ -593,7 +606,7 @@ footer hr {
 @media screen and (max-width: 1024px) {
   .marker-li, .contact-li, .sign-block, #city-li, #language-li span, #currency-li span,
   .nav-panel, .contact-icons-group img, .phone-number, .background-flowers, .main-section-desktop,
-  .inf-images-section {
+  .inf-images-section, #infoDropDown, #supportDropdown, #additionalDropDown, #lcDropDown {
     display: none;
   }
   .container, .container-md, .container-sm {
@@ -788,6 +801,31 @@ footer hr {
     padding-top: 23px;
     text-indent: 30px;
     line-height: 25px;
+  }
+  .footer-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .logo-img {
+    text-align: center;
+    margin-bottom: 76px;
+  }
+  .logo-img .text-for-logo {
+    bottom: -20px;
+    left: 43%;
+  }
+  .vector {
+    background-image: url(icons/footer-vector-right.png);
+    background-repeat: no-repeat;
+    background-position-x: 96%;
+  }
+  footer h3 {
+    margin-bottom: 23px;
+  }
+  footer ul {
+    margin-bottom: 23px;
   }
 }
 
