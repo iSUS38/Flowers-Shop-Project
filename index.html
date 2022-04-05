@@ -1,0 +1,853 @@
+<html>
+    <head>
+        <title>Flowers Shop Project</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous">
+        </script>
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="header-divide">
+                    <ul class="header-list">
+                        <li id="currency-li">
+                            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                                <div class="container-fluid">
+                                    <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                                        <span>Валюта</span>
+                                        <ul class="navbar-nav">
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle currencyNeedToChange" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            UAH
+                                            </a>
+                                            <ul class="dropdown-menu dropdown-menu-dark currency-dropdown" aria-labelledby="navbarDarkDropdownMenuLink">
+                                            <li><a class="dropdown-item" href="#">RUB</a></li>
+                                            <li><a class="dropdown-item" href="#">USD</a></li>
+                                            </ul>
+                                        </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </nav>   
+                        </li>
+                        <li id="language-li">
+                            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                                <div class="container-fluid">
+                                    <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                                        <span>Язык</span>
+                                        <ul class="navbar-nav">
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle languageNeedToChange" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            RU
+                                            </a>
+                                            <ul class="dropdown-menu dropdown-menu-dark language-dropdown" aria-labelledby="navbarDarkDropdownMenuLink">
+                                            <li><a class="dropdown-item" href="#">UA</a></li>
+                                            <li><a class="dropdown-item" href="#">EN</a></li>
+                                            </ul>
+                                        </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </nav>
+                        </li>   
+                        <li id="city-li">
+                            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                                <div class="container-fluid">
+                                    <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                                        <span>Город</span>
+                                        <ul class="navbar-nav">
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle cityNeedToChange" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Киев
+                                            </a>
+                                            <ul class="dropdown-menu dropdown-menu-dark city-dropdown" aria-labelledby="navbarDarkDropdownMenuLink">
+                                            <li><a class="dropdown-item" href="#">Винница</a></li>
+                                            <li><a class="dropdown-item" href="#">Одесса</a></li>
+                                            <li><a class="dropdown-item" href="#">Львов</a></li>
+                                            </ul>
+                                        </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </nav>
+                        </li>   
+                        <li class="marker-li">Закладки</li>
+                        <li class="delivery-li">Доставка и оплата</li>
+                        <li class="contact-li">Контакты</li>
+                    </ul>
+                    <div class="sign-block">
+                        <span class="sign-block-border">Вход</span>
+                        <span>Регистрация</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <nav class="margin-top-nav">
+            <div class="container d-flex justify-content-between">
+                <div id="mobile-menu">
+                    <img src="icons/mobile-menu.png" alt="Меню магазина">
+                </div>
+                <div>
+                    <img id="logotype" src="images/image 11.png" alt="logotype">
+                </div>
+                <div class="nav-panel">
+                    <div>
+                        <input class="search-input-1" type="search" placeholder="Поиск по категориям">
+                        <input class="search-input-2" type="search" placeholder="Поиск по товарам">
+                    </div>
+                    <div class="block-2-nav">
+                        <ul class="d-flex nav-list">
+                            <li>
+                                <div>
+                                    <a class="myDropdown-a-1 myDropDown-a">Каталог товаров</a>
+                                    <ul class="myDropDown-list-1">
+                                        <li>Все букеты</li>
+                                        <li>Розы</li>
+                                        <li>Цветы в коробке</li>
+                                        <li>Композиции</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>Форум</li>
+                            <li>Отзывы</li>
+                            <li>Акции</li>
+                            <li>Новости</li>
+                            <li>
+                                <div>
+                                    <a class="myDropdown-a-2 myDropDown-a">Информация</a>
+                                    <ul class="myDropDown-list-2">
+                                        <li>Lorem ipsum</li>
+                                        <li>Tempore sit</li>
+                                        <li>Quo inventore</li>
+                                        <li>Est provident</li>
+                                        <li>Aperiam possimus</li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="information-panel">
+                    <div class="contact-icons-group">
+                        <div>
+                            <img src="icons/viber.png" alt="viber">
+                        </div>
+                        <div>
+                            <img src="icons/inst.png" alt="instagram">
+                        </div>
+                        <div>
+                            <img src="icons/face.png" alt="facebook">
+                        </div>
+                    </div>
+                    <div class="phone-number">
+                        <span>+38 (067) 829 30 30</span>
+                    </div>
+                    <div class="product-icons-group">
+                        <div class="wishlist">
+                            <img id="wishlist" src="icons/wishlist-big-icon.png" alt="Избранное">
+                            <div class="wishlist-circle"></div>
+                        </div>
+                        <div class="cart">
+                            <img id="cart" src="icons/cart.png" alt="Корзина">
+                            <div class="cart-circle"></div>
+                        </div>
+                        <div id="divSum-Value">
+                            <span id="sum-value"> грн</span>
+                        </div>
+                    </div>
+                    <div id="divValueAappendTo"></div>
+                </div>
+            </div>
+        </nav>
+        <div class="background-flowers">
+            <img src="images/left-background-flower.png">
+            <img src="images/right-background-flower.png">
+        </div>
+        <main>
+            <section class="main-section-mobile">
+                <div>
+                    <img id="image1Mobile" src="images/mobile-1.png" alt="Скидки на все 6% к 8 марту">
+                    <img id="image2Mobile" src="images/mobile-2.png" alt="Подарки">
+                    <img id="image3Mobile" src="images/mobile-3.png" alt="Розы">
+                    <div class="mobile-switcher-icon mobile-switcher-icon-1"></div>
+                    <div class="mobile-switcher-icon mobile-switcher-icon-2"></div>
+                    <div class="mobile-switcher-icon mobile-switcher-icon-3"></div>
+                    <div id="text-for-mobile-images">Скидки <span>-6%</span> на все<br> букеты по предзаказу<br> <span>на 8 марта</span></div>
+                </div>
+            </section>
+            <section class="container mt-5 margin main-section-desktop">
+                <div class="photo-catalog">
+                    <div class="catalog-item-1">
+                        <img src="images/1.png">
+                        <div class="description-item-1">
+                            <p>Скидки <span>-6%</span> на все<br> букеты <span>по предзаказу</span><br> на 8 марта</p>
+                        </div>
+                    </div>
+                    <div class="catalog-item-2">
+                        <img src="images/2.png">
+                        <div class="description-item-2">
+                            <p>Розы</p>
+                        </div>
+                    </div>
+                    <div class="catalog-item-3">
+                       <img src="images/3.png">
+                       <div class="description-item-3">
+                           <p>Подарки</p>
+                       </div>
+                    </div>
+                    <div class="catalog-item-4">
+                        <img src="images/4.png">
+                    </div>
+                    <div class="catalog-item-5">
+                       <img src="images/5.png">
+                    </div>
+                </div>
+            </section>
+            <section class="container inf-images-section-mobile">
+                <div id="mobile-inf-block-1">
+                    <img src="images/photos-1.png" alt="Фото доставок">
+                </div>
+                <div id="mobile-inf-block-2">
+                    <img src="images/photos-2.png" alt="Видео отчеты">
+                </div>
+                <div id="mobile-inf-block-3">
+                    <img src="images/photos-3.png" alt="Подарок клиентам">
+                </div>
+            </section>
+            <section class="inf-images-section">
+                <div class="container mt-5 inf-block">
+                    <div>
+                        <img src="images/photo.png">
+                    </div>
+                    <div>
+                        <img src="images/video.png">
+                    </div>
+                    <div>
+                        <img src="images/present.png">
+                    </div>
+                </div>
+            </section>
+            <section class="container products-section product-image-width">
+                <div class="products-header">
+                    <h1>Акции</h1>
+                </div>
+                <!-- 1 product-->
+                <div class="products-menu">
+                    <div class="products-menu-style">
+                        <div class="bacground-image-products-menu padding-product-first">
+                            <img src="images/flower-1.png" alt="101 красная роза">
+                            <div class="action-circle">-19%</div>
+                            <div class="top-circle">TOP</div>
+                            <div class="wishlist-icon"><img src="icons/wishlist-big-icon.png"></div>
+                        </div>
+                        <div>
+                            <div class="review-raiting">
+                                <div class="raiting-items">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between product-description">
+                                <span>101 красная<br> роза</span>
+                                <div class="product-description-text roses-price-str">
+                                    <p>1300 грн</p>
+                                    <p>1100 грн</p>
+                                </div>
+                            </div>
+                            <div class="button-style">
+                                <button>Заказать</button>
+                            </div>
+                            <div class="add-to-cart roses-price-str">
+                                <span>Добавить в корзину</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 2 product-->
+                    <div class="products-menu-style">
+                        <div class="bacground-image-products-menu">
+                            <img src="images/flowers-2.png" alt="101 красная роза">
+                            <div class="action-circle">-15%</div>
+                            <div class="top-circle">TOP</div>
+                            <div class="wishlist-icon"><img src="icons/wishlist-big-icon.png"></div>
+                        </div>
+                        <div>
+                            <div class="review-raiting">
+                                <div class="raiting-items">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between product-description">
+                                <span>25 пионовидных<br> роз</span>
+                                <div class="product-description-text price-pionRoses-str">
+                                    <p>900 грн</p>
+                                    <p>750 грн</p>
+                                </div>
+                            </div>
+                            <div class="button-style">
+                                <button>Заказать</button>
+                            </div>
+                            <div class="add-to-cart price-pionRoses-str">
+                                <span>Добавить в корзину</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 3 product-->
+                    <div class="products-menu-style">
+                        <div class="bacground-image-products-menu">
+                            <img src="images/flowers-3.png" alt="101 красная роза">
+                            <div class="action-circle">-15%</div>
+                            <div class="top-circle">TOP</div>
+                            <div class="wishlist-icon"><img src="icons/wishlist-big-icon.png"></div>
+                        </div>
+                        <div>
+                            <div class="review-raiting">
+                                <div class="raiting-items">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between product-description">
+                                <span>Влюбленность</span>
+                                <div class="product-description-text loveBoucquet-price">
+                                    <p>950 грн</p>
+                                    <p>850 грн</p>
+                                </div>
+                            </div>
+                            <div class="button-style">
+                                <button>Заказать</button>
+                            </div>
+                            <div class="add-to-cart loveBoucquet-price">
+                                <span>Добавить в корзину</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 4 product-->
+                    <div class="products-menu-style">
+                        <div class="bacground-image-products-menu padding-product-last">
+                            <img src="images/flowers-4.png" alt="101 красная роза">
+                            <div class="action-circle">-10%</div>
+                            <div class="top-circle">TOP</div>
+                            <div class="wishlist-icon"><img src="icons/wishlist-big-icon.png"></div>
+                        </div>
+                        <div>
+                            <div class="review-raiting">
+                                <div class="raiting-items">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between product-description">
+                                <span>Корзина<br> все для тебя</span>
+                                <div class="product-description-text busketBoucquet-price">
+                                    <p>600 грн</p>
+                                    <p>500 грн</p>
+                                </div>
+                            </div>
+                            <div class="button-style">
+                                <button>Заказать</button>
+                            </div>
+                            <div class="add-to-cart busketBoucquet-price">
+                                <span>Добавить в корзину</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 5 product-->
+                    <div class="products-menu-style">
+                        <div class="bacground-image-products-menu padding-product-first">
+                            <img src="images/flower-1.png" alt="101 красная роза">
+                            <div class="action-circle">-19%</div>
+                            <div class="top-circle">TOP</div>
+                            <div class="wishlist-icon"><img src="icons/wishlist-big-icon.png"></div>
+                        </div>
+                        <div>
+                            <div class="review-raiting">
+                                <div class="raiting-items">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between product-description">
+                                <span>101 красная<br> роза</span>
+                                <div class="product-description-text roses-price-str">
+                                    <p>1300 грн</p>
+                                    <p>1100 грн</p>
+                                </div>
+                            </div>
+                            <div class="button-style">
+                                <button>Заказать</button>
+                            </div>
+                            <div class="add-to-cart roses-price-str">
+                                <span>Добавить в корзину</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 6 product-->
+                    <div class="products-menu-style">
+                        <div class="bacground-image-products-menu">
+                            <img src="images/flowers-2.png" alt="101 красная роза">
+                            <div class="action-circle">-15%</div>
+                            <div class="top-circle">TOP</div>
+                            <div class="wishlist-icon"><img src="icons/wishlist-big-icon.png"></div>
+                        </div>
+                        <div>
+                            <div class="review-raiting">
+                                <div class="raiting-items">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between product-description">
+                                <span>25 пионовидных<br> роз</span>
+                                <div class="product-description-text price-pionRoses-str">
+                                    <p>900 грн</p>
+                                    <p>750 грн</p>
+                                </div>
+                            </div>
+                            <div class="button-style">
+                                <button>Заказать</button>
+                            </div>
+                            <div class="add-to-cart price-pionRoses-str">
+                                <span>Добавить в корзину</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 7 product-->
+                    <div class="products-menu-style">
+                        <div class="bacground-image-products-menu">
+                            <img src="images/flowers-3.png" alt="101 красная роза">
+                            <div class="action-circle">-15%</div>
+                            <div class="top-circle">TOP</div>
+                            <div class="wishlist-icon"><img src="icons/wishlist-big-icon.png"></div>
+                        </div>
+                        <div>
+                            <div class="review-raiting">
+                                <div class="raiting-items">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between product-description">
+                                <span>Влюбленность</span>
+                                <div class="product-description-text loveBoucquet-price">
+                                    <p>950 грн</p>
+                                    <p>850 грн</p>
+                                </div>
+                            </div>
+                            <div class="button-style">
+                                <button>Заказать</button>
+                            </div>
+                            <div class="add-to-cart loveBoucquet-price">
+                                <span>Добавить в корзину</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 8 product-->
+                    <div class="products-menu-style">
+                        <div class="bacground-image-products-menu padding-product-last">
+                            <img src="images/flowers-4.png" alt="101 красная роза">
+                            <div class="action-circle">-10%</div>
+                            <div class="top-circle">TOP</div>
+                            <div class="wishlist-icon"><img src="icons/wishlist-big-icon.png"></div>
+                        </div>
+                        <div>
+                            <div class="review-raiting">
+                                <div class="raiting-items">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between product-description">
+                                <span>Корзина все<br> для тебя</span>
+                                <div class="product-description-text busketBoucquet-price">
+                                    <p>600 грн</p>
+                                    <p>500 грн</p>
+                                </div>
+                            </div>
+                            <div class="button-style">
+                                <button>Заказать</button>
+                            </div>
+                            <div class="add-to-cart busketBoucquet-price">
+                                <span>Добавить в корзину</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="container products-section product-image-width">
+                <div class="products-header">
+                    <h1>Сезонные</h1>
+                </div>
+                <div class="products-menu">
+                    <!-- product 1 -->
+                    <div class="products-menu-style">
+                        <div class="bacground-image-products-menu">
+                            <img src="images/season-1.png" alt="Букет Мечтательница">
+                            <div class="top-circle">TOP</div>
+                            <div class="wishlist-icon"><img src="icons/wishlist-big-icon.png"></div>
+                        </div>
+                        <div>
+                            <div class="review-raiting">
+                                <div class="raiting-items">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between product-description">
+                                <span>Букет<br>мечтательница</span>
+                                <div class="product-description-text">
+                                    <span>2280 грн</span>
+                                </div>
+                            </div>
+                            <div class="button-style">
+                                <button>Заказать</button>
+                            </div>
+                            <div class="add-to-cart">
+                                <p>Добавить в корзину</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- product 2 -->
+                    <div class="products-menu-style">
+                        <div class="bacground-image-products-menu">
+                            <img src="images/season-2.png" alt="Виниловая пластинка">
+                            <div class="top-circle">TOP</div>
+                            <div class="wishlist-icon"><img src="icons/wishlist-big-icon.png"></div>
+                        </div>
+                        <div>
+                            <div class="review-raiting">
+                                <div class="raiting-items">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between product-description">
+                                <span>Виниловая<br> пластинка</span>
+                                <div class="product-description-text">
+                                    <span>2280 грн</span>
+                                </div>
+                            </div>
+                            <div class="button-style">
+                                <button>Заказать</button>
+                            </div>
+                            <div class="add-to-cart">
+                                <p>Добавить в корзину</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- product 3 -->
+                    <div class="products-menu-style">
+                        <div class="bacground-image-products-menu">
+                            <img src="images/season-3.png" alt="Магия лунного света">
+                            <div class="top-circle">TOP</div>
+                            <div class="wishlist-icon"><img src="icons/wishlist-big-icon.png"></div>
+                        </div>
+                        <div>
+                            <div class="review-raiting">
+                                <div class="raiting-items">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between product-description">
+                                <span>Магия<br> лунного света</span>
+                                <div class="product-description-text">
+                                    <span>2280 грн</span>
+                                </div>
+                            </div>
+                            <div class="button-style">
+                                <button>Заказать</button>
+                            </div>
+                            <div class="add-to-cart">
+                                <p>Добавить в корзину</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- product 4-->
+                    <div class="products-menu-style">
+                        <div class="bacground-image-products-menu">
+                            <img src="images/season-4.png" alt="Корзина Дюймовочка">
+                            <div class="top-circle">TOP</div>
+                            <div class="wishlist-icon"><img src="icons/wishlist-big-icon.png"></div>
+                        </div>
+                        <div>
+                            <div class="review-raiting">
+                                <div class="raiting-items">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between product-description">
+                                <span>Корзина<br> Дюймовочка</span>
+                                <div class="product-description-text">
+                                    <span>2280 грн</span>
+                                </div>
+                            </div>
+                            <div class="button-style">
+                                <button>Заказать</button>
+                            </div>
+                            <div class="add-to-cart">
+                                <p>Добавить в корзину</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- product 5-->
+                    <div class="products-menu-style">
+                        <div class="bacground-image-products-menu">
+                            <img src="images/season-1.png" alt="Букет Мечтательница">
+                            <div class="top-circle">TOP</div>
+                            <div class="wishlist-icon"><img src="icons/wishlist-big-icon.png"></div>
+                        </div>
+                        <div>
+                            <div class="review-raiting">
+                                <div class="raiting-items">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between product-description">
+                                <span>Букет<br> мечтательница</span>
+                                <div class="product-description-text">
+                                    <span>2280 грн</span>
+                                </div>
+                            </div>
+                            <div class="button-style">
+                                <button>Заказать</button>
+                            </div>
+                            <div class="add-to-cart">
+                                <p>Добавить в корзину</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- product 6 -->
+                    <div class="products-menu-style">
+                        <div class="bacground-image-products-menu">
+                            <img src="images/season-2.png" alt="Виниловая пластинка">
+                            <div class="top-circle">TOP</div>
+                            <div class="wishlist-icon"><img src="icons/wishlist-big-icon.png"></div>
+                        </div>
+                        <div>
+                            <div class="review-raiting">
+                                <div class="raiting-items">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between product-description">
+                                <span>Виниловая<br> пластинка</span>
+                                <div class="product-description-text">
+                                    <span>2280 грн</span>
+                                </div>
+                            </div>
+                            <div class="button-style">
+                                <button>Заказать</button>
+                            </div>
+                            <div class="add-to-cart">
+                                <p>Добавить в корзину</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- product 7 -->
+                    <div class="products-menu-style">
+                        <div class="bacground-image-products-menu">
+                            <img src="images/season-3.png" alt="Букет Магия лунного света">
+                            <div class="top-circle">TOP</div>
+                            <div class="wishlist-icon"><img src="icons/wishlist-big-icon.png"></div>
+                        </div>
+                        <div>
+                            <div class="review-raiting">
+                                <div class="raiting-items">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between product-description">
+                                <span>Магия<br> лунного света</span>
+                                <div class="product-description-text">
+                                    <span>2280 грн</span>
+                                </div>
+                            </div>
+                            <div class="button-style">
+                                <button>Заказать</button>
+                            </div>
+                            <div class="add-to-cart">
+                                <p>Добавить в корзину</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- product 8-->
+                    <div class="products-menu-style">
+                        <div class="bacground-image-products-menu">
+                            <img src="images/season-4.png" alt="Корзина Дюймовочка">
+                            <div class="top-circle">TOP</div>
+                            <div class="wishlist-icon"><img src="icons/wishlist-big-icon.png"></div>
+                        </div>
+                        <div>
+                            <div class="review-raiting">
+                                <div class="raiting-items">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                    <input class="raiting-item" name="review">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between product-description">
+                                <span>Корзина<br> Дюймовочка</span>
+                                <div class="product-description-text">
+                                    <span>600 грн</span>
+                                </div>
+                            </div>
+                            <div class="button-style">
+                                <button>Заказать</button>
+                            </div>
+                            <div class="add-to-cart">
+                                <p>Добавить в корзину</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="container mobile-forum-section">
+                <div>
+                    <h2>Форум</h2>
+                </div>
+                <div>
+                    <div id="mobile-forum-photo">
+                        <img src="images/image-26.png" alt="Какие цветы под запретом: что нельзя дарить">
+                    </div>
+                    <div class="mobile-forum-block">
+                        <h6>Какие цветы под запретом: что нельзя дарить</h6>
+                        <p>Осведомленности в сфере новых трендов<br> цветочного дизайна и знакомства с<br> работами...</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="container">
+                <div class="footer-list">
+                    <div class="logo-img">
+                        <img src="images/lgo.png" alt="логотип">
+                        <div class="text-for-logo">
+                            <span>flowers-ukraine</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="dropDownSwitcher vector">ИНФОРМАЦИЯ</h3>
+                        <ul id="infoDropDown">
+                            <li>О нас</li>
+                            <li>Доставка и оплата</li>
+                            <li>Политика конфиденциальности</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="dropDownSwitcher vector">СЛУЖБА ПОДДЕРЖКИ</h3>
+                        <ul id="supportDropDown">
+                            <li>Карта сайта</li>
+                            <li>Возврат средств</li>
+                            <li>Контакты</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="dropDownSwitcher vector">Личный кабинет</h3>
+                        <ul id="lcDropDown">
+                            <li>Личный кабинет</li>
+                            <li>История заказа</li>
+                            <li>Закладки</li>
+                            <li>Список новостей</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="dropDownSwitcher vector">Дополнительно</h3>
+                        <ul id="additionalDropDown">
+                            <li>Подарочные сертификаты</li>
+                            <li>Акции</li>
+                            <li>Цветы в офис</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="container mt-3 pb-3 footer-block-2">
+                <div class="copyright-text">
+                    <span>Copyright © 2021. Все права защищены</span>
+                </div>
+                <div class="position-relative text-center">
+                    <span class="pay-text">Способы оплаты:</span>
+                    <div class="pay-icons">
+                        <div>
+                            <img src="icons/image 52.png" alt="Способ оплаты приват банк">
+                        </div>
+                        <div>
+                            <img src="icons/image 35.png" alt="Способ оплаты MasterCard">
+                        </div>
+                        <div>
+                            <img src="icons/image 36.png" alt="Способ оплаты Masestro">
+                        </div>
+                        <div>
+                            <img src="icons/image 37.png" alt="Способ оплаты Visa Electron">
+                        </div>
+                        <div>
+                            <img src="icons/Rectangle 19.png" alt="Способ оплаты Visa Card">
+                        </div>
+                        <div>
+                            <img src="icons/image 53.png" alt="Liq pay оплата">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
